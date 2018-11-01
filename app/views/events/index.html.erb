@@ -1,0 +1,40 @@
+<div class="row ">
+  <div class="eight columns">
+    <% @events.each do |event| %>
+      <card class="event-card">
+        <h4><%= event.title %></h4>
+        <% if event.banner_image_url? %>
+          <%= image_tag event.banner_image_url.url %>
+        <% else %>
+          <img src="http://via.placeholder.com/540x300">
+        <% end %>
+        <div class="row">
+          <div class="six columns">
+            <p class="major-info"><%= event.location %></p>
+            <p class="major-info"><%= event.start_at.strftime('%Y/%m/%d %H:%M') %></p>
+          </div>
+          <div class="six columns">
+            <p class="ticket-price"><%= event.ticket_price %>円</p>
+            <%= link_to 'Purchase', new_event_purchase_path(event), class: 'button button-primary' %>
+          </div>
+        </div>
+      </card>
+    <% end %>
+    <%= paginate @events %>
+  </div>
+  <sidebar class="four columns categories-sb">
+    <card class="categories-card">
+      <h4>Categories</h4>
+      <% @categories.each do |category| %>
+      <ul>
+        <li><a><%= link_to category.name, category_path(category.id) %></a></li>
+      </ul>
+      <% end %>
+    </card>
+    <card class="search-card">
+      <h4>Search</h4>
+      <input class="u-full-width" type="text">
+      <a class='button button-primary u-full-width'>Search</a>
+    </card>
+  </sidebar>
+</div>
