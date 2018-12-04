@@ -1,3 +1,4 @@
+<%= button_to "新規作成", {:controller => "admin/articles", :action => "new"} %>
 <%= @articles.each do |article| %>
   <p><%= link_to article.title, admin_article_path(article.id) %></p>
 <% end %>

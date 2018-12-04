@@ -1,0 +1,37 @@
+
+<div class="row ">
+  <div class="eight columns">
+    <% @articles.each do |article| %>
+      <card class="article-card">
+        <h4><%= article.title %></h4>
+        <% if article.banner_image_url? %>
+          <%= image_tag article.banner_image_url.url %>
+        <% else %>
+          <img src="http://via.placeholder.com/540x300">
+        <% end %>
+        <div class="row">
+          <div class="six columns">
+            <p class="major-info"><%= "article.location" %></p>
+            <p class="major-info"><%= article.created_at.strftime('%Y/%m/%d %H:%M') %></p>
+          </div>
+        </div>
+      </card>
+    <% end %>
+    <%= paginate @articles %>
+  </div>
+  <sidebar class="four columns categories-sb">
+    <card class="categories-card">
+      <h4>Categories</h4>
+      <% @article_categories.each do |category| %>
+      <ul>
+        <li><a><%= link_to category.name, category_path(category.id) %></a></li>
+      </ul>
+      <% end %>
+    </card>
+    <card class="search-card">
+      <h4>Search</h4>
+      <input class="u-full-width" type="text">
+      <a class='button button-primary u-full-width'>Search</a>
+    </card>
+  </sidebar>
+</div>
