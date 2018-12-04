@@ -1,11 +1,11 @@
 class ArticlesController < ApplicationController
-    PER = 5
+    # PER = 5
 
     def index
       @articles = Article.all
-      @articles = Article.paginate(:page => params[:page], :per_page => PER)
-      @categories = Article.all
-      render json: @articles
+    #   @articles = Article.paginate(:page => params[:page], :per_page => PER)
+      @categories = ArticleCategory.all
+      # render json: @articles
     end
 
     def category

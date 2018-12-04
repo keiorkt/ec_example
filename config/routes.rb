@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :event_categories
+    resources :article_categories
     resources :events
+    resources :articles
   end
 end

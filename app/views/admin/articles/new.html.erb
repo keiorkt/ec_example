@@ -1,0 +1,12 @@
+
+<%= form_for(@article, :url => admin_articles_path) do |form| %>
+ <div id="editor">
+    タイトル：<%= form.text_field :title, { :size => 30 } %><br />
+    <%# TODO: 本文のレイアウトを綺麗にする %>
+    本文： <%= form.text_area :body %><br />
+    カテゴリ： <%= form.select :article_category_id,
+                  options_for_select(@article_categories),
+                  :prompt => "選択してください" %><br />
+    <%= form.submit %>
+ <div>
+<% end %>
