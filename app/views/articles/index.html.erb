@@ -4,11 +4,11 @@
     <% @articles.each do |article| %>
       <card class="article-card">
         <h4><%= article.title %></h4>
-        <% if article.banner_image_url? %>
-          <%= image_tag article.banner_image_url.url %>
-        <% else %>
+        <%# <% if article.banner_image_url? %>
+          <%# <%= image_tag article.banner_image_url.url %>
+        <%# <% else %>
           <img src="http://via.placeholder.com/540x300">
-        <% end %>
+        <%# <% end %>
         <div class="row">
           <div class="six columns">
             <p class="major-info"><%= "article.location" %></p>

@@ -53,11 +53,11 @@ card > h4:not([class]):first-child, card > h4[xx]:first-child {
   text-align: center;
 }
 
-#minicon-logo {
+#keita-logo {
   margin-top: 8px;
 }
 
-#minicon-icon {
+#keita-icon {
   display: block;
   margin: 1rem auto;
 }
