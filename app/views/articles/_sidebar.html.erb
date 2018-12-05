@@ -1,6 +1,6 @@
   <sidebar class="four columns categories-sb">
     <card class="categories-card">
-      <h4>Categories</h4>
+      <h4>カテゴリ</h4>
       <% article_categories.each do |category| %>
       <ul>
         <li><a><%= link_to category.name, category_path(category.id) %></a></li>
@@ -8,8 +8,20 @@
       <% end %>
     </card>
     <card class="search-card">
-      <h4>Search</h4>
+      <h4>検索</h4>
       <input class="u-full-width" type="text">
       <a class='button button-primary u-full-width'>Search</a>
+    </card>
+    <card class="profile-card">
+      <h4>管理者プロフィール</h4>
+      <%= image_tag("profile_picture.jpg") %>
+      <ul>
+        <li>早稲田大学国際教養学部1年</li>
+        <li>高校時代より独学でプログラミングを勉強しスタートアップでインターンを経験</li>
+        <li>Web開発、iOSアプリ開発、データ分析</li>
+        <li>Swift Rails JS</li>
+        <li>英語話せる</li>
+        <li>座右の銘は「よく寝て、よく食べて、よく運動」</li>
+      </ul>
     </card>
   </sidebar>

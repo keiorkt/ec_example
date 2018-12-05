@@ -1,5 +1,5 @@
+<%= render 'articles/result', :result => @articles.first.article_category.name %>
 <div class="row">
-  <%= render 'articles/result', :result => @articles.first.article_category.name %>
   <%= render 'articles/articles', :articles => @articles %>
   <%= render 'articles/sidebar', :article_categories => @article_categories %>
 </div>
