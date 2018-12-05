@@ -1,0 +1,15 @@
+  <sidebar class="four columns categories-sb">
+    <card class="categories-card">
+      <h4>Categories</h4>
+      <% article_categories.each do |category| %>
+      <ul>
+        <li><a><%= link_to category.name, category_path(category.id) %></a></li>
+      </ul>
+      <% end %>
+    </card>
+    <card class="search-card">
+      <h4>Search</h4>
+      <input class="u-full-width" type="text">
+      <a class='button button-primary u-full-width'>Search</a>
+    </card>
+  </sidebar>
