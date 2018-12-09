@@ -1,4 +1,5 @@
 class Admin::ArticlesController < Admin::BaseController
+    before_action :authenticate_admin!
 
     # GET /admin/articles
     def index
