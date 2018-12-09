@@ -1,0 +1,14 @@
+
+<%= form_for(@article, :url => admin_articles_path) do |form| %>
+ <div id="editor">
+    <b>タイトル</b><br/>
+    <%= form.text_field :title, :size => 30 %><br/>
+    <%# TODO: 本文のレイアウトを綺麗にする %>
+    <b>本文</b><br/>
+    <%= form.text_area :body,:size => "80" %><br/>
+    <b>カテゴリ</b><br/>
+    <%= form.select :article_category_id, options_for_select(@article_categories) %><br/>
+    <%= form.submit("新規作成する", data: { confirm: "登録していいですか？" }) %>
+    <button><%= link_to("一覧へ", :back) %></button>
+ <div>
+<% end %>

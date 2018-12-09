@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Minicon</title>
+    <title>Keita's Tech Blog</title>
     <%= csrf_meta_tags %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,15 +9,17 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('keita-icon.png') %>
   </head>
 
   <body>
+    <p class="alert"><%= alert %></p>
     <header id="page-header">
       <div class="container">
         <div class="row">
           <div class="four columns">
             <%= link_to root_path do %>
-              <%= image_tag 'minicon_logo_56.png', id: 'minicon-logo' %>
+              <%= image_tag 'keita_logo_56.png', id: 'keita-logo' %>
             <% end %>
           </div>
           <div id="header-links" class="eight columns">
@@ -79,8 +81,8 @@
     <div class="container">
       <div class="row">
         <div class="twelve columns">
-          <%= image_tag 'minicon_icon_96.png', id: 'minicon-icon' %>
-          Copyright (c) minicon All Rights Reserved.
+          <%= image_tag 'keita_icon_96.png', id: 'keita-icon' %>
+          Copyright (c) keita All Rights Reserved.
         </div>
       </div>
     </div>
