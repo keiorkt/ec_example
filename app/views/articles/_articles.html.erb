@@ -1,5 +1,6 @@
 <div class="eight columns">
   <% articles.each do |article| %>
+    <%= link_to article_path(article.id), :action => 'go', class: 'link-to-text-color' do %>
     <card class="article-card">
       <h4><%= article.title %></h4>
       <%# <% if article.banner_image_url? %>
@@ -9,11 +10,11 @@
       <%# <% end %>
       <div class="row">
         <div class="six columns">
-          <p class="major-info"><%= "article.location" %></p>
           <p class="major-info"><%= article.created_at.strftime('%Y/%m/%d %H:%M') %></p>
         </div>
       </div>
     </card>
+    <% end %>
   <% end %>
   <%= paginate articles %>
 </div>

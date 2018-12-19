@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :purchases, only: [:new, :create]
   end
 
-  resources :articles, only: [:index]
+  resources :articles, only: [:index, :show]
 
   get '/purchases', to: 'purchases#index'
 

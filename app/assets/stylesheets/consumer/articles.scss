@@ -1,0 +1,35 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ .article-card, .categories-sb {
+    margin-top: 3em;
+  }
+
+  .article-card h4 {
+    background-color: #FFE486;
+  }
+
+  .article-detail {
+    font-size: 1.2em;
+  }
+
+  .date-info {
+      font-size: 1.2em;
+      margin-top: 1em;
+  }
+
+  .link-to-text-color {
+      color: #000000;
+      text-decoration: none;
+  }
+
+  .link-to-text-color:hover {
+      color: #000000;
+      text-decoration: none;
+  }
+
+  .code {
+      background: #EFEFEF;
+      padding-left: 10px;
+  }
