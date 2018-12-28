@@ -3,7 +3,7 @@
     <card class="article-card">
       <h4><%= article.title %></h4>
       <div class="row">
-        <div class="six columns">
+        <div class="eight columns">
           <p class="date-info"><%= article.created_at.strftime('%Y/%m/%d %H:%M') %></p>
           <p class="article-detail markdown"><%= markdown(article.body).html_safe %></p>
         </div>
