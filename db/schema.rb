@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2018_12_09_040956) do
 
-  create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.datetime "remember_created_at"
@@ -24,13 +27,13 @@ ActiveRecord::Schema.define(version: 2018_12_09_040956) do
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
-  create_table "article_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "article_categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.integer "article_category_id"
